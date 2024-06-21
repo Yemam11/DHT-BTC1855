@@ -13,6 +13,13 @@ input <- readline(prompt="Enter a three digit positive number: ")
 # coercing them as numeric will result in NA.
 input_num <- as.numeric(input)
 
+#' Comments for Q1:
+#' Nice! runs as expected, successfully takes user input
+#' Small suggestion, totally optional, when you coerce the input using as.numeric sometimes it will create NAs
+#' The console will show a warning that NAs are introduced
+#' Since you are handling this case (if the input is an NA), you can use supressWarnings() to prevent the warning,
+#' and print your own message, just like you already did
+
 # We'll combine all the assessment of the user's input into a single if 
 # condition, with else if and a nested if. First, we'll check the validity of 
 # the user's input before finally chekcing whether that input is a narcissistic/
@@ -28,6 +35,12 @@ if (is.na(input_num)){
   # Also check whether the numeric input is a three digit number, report it 
   # if its not
   print(paste(input, "is not a three digit number"))
+  
+  
+  #' Comments for Q2:
+  #' Code runs as expected, and successfully filters out invalid user inputs
+  #' Well done!
+  
 } else {
   # Finally, if the input is a three digit positive number, calculate the 
   # sum of the cubes
@@ -40,6 +53,11 @@ if (is.na(input_num)){
   
   sum_cubes <- (first_num)^3 + (second_num)^3 + (third_num)^3
   
+  #' Comments for Q3:
+  #' Nice! works as expected, is easy to understand
+  #' I like that you used substr, I hadnt seen that function before
+  #' It would be helpful to include a comment that explains why youre using it and what it's default parameters are
+  
   if (sum_cubes == as.numeric(input)){
     # If the sum of the cubes is the same as the input, print it is a 
     # narcissistic number
@@ -50,3 +68,14 @@ if (is.na(input_num)){
     print(paste(input, "is not an Armstrong number, try again :(("))
   }
 }
+
+#' Comments for Q4:
+#' Again well done! The code works as expected and prints an appropriate response
+#' Suggestion for: [if (sum_cubes == as.numeric(input))]
+#' Here you can use the the input_num instead of reapplying the as.numeric function to input
+#' You already did this before and stored it in a variable so why not just reuse it?
+#' It makes your code more efficient
+
+
+#' Overall:
+#' Well done!
